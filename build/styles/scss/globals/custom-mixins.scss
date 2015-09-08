@@ -98,12 +98,12 @@
 	-o-transform: rotate($deg);
 }
 
-@mixin transition($seconds:0.4s) { 
-	-moz-transition: $seconds ease;
-	-ms-transition: $seconds ease;
-	-o-transition:$seconds ease;
-	transition: $seconds ease;
-	-webkit-transition: $seconds ease;	
+@mixin transition($seconds:0.3s) { 
+	-moz-transition:all $seconds ease-out;
+	-ms-transition:all $seconds ease-out;
+	-o-transition:all $seconds ease-out;
+	transition:all $seconds ease-out;
+	-webkit-transition:all $seconds ease-out;	
 }
 
 @mixin transparent($op: 0.5, $ieop: 50) {

@@ -20,8 +20,10 @@ $img-url: "../img";
 
 // Globals
 // ------------------------------------------------------------------------
-@import "globals/header";
 @import "globals/typography";
+@import "globals/mainNav";
+@import "globals/layout";
+@import "globals/header";
 @import "globals/defaults";
 
 // Start Application Styles & Settings
