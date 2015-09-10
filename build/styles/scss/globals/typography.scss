@@ -2,6 +2,7 @@ $light:200;
 $regular:400;
 $bold:600;
 
+body{color:$gray1;font-weight:$light;line-height:1.6em;}
 .strong{font-weight:$bold;}
 
 h1{font-size:42px;}

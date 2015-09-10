@@ -26,6 +26,10 @@ $img-url: "../img";
 @import "globals/header";
 @import "globals/defaults";
 
+// Globals - Page Type Specific
+// ------------------------------------------------------------------------
+@import "globals/thingsToDo";
+
 // Start Application Styles & Settings
 // ------------------------------------------------------------------------
 @import "partials/viewport";
