@@ -11,6 +11,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/assets\/img\/icons\/clock.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1262,
+		"inputAbbreviatedPath": "\/app\/assets\/img\/icons\/clock.png",
+		"outputAbbreviatedPath": "\/app\/assets\/img\/icons\/clock.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/app\/assets\/img\/icons\/status.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 994,
+		"inputAbbreviatedPath": "\/app\/assets\/img\/icons\/status.png",
+		"outputAbbreviatedPath": "\/app\/assets\/img\/icons\/status.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/app\/assets\/img\/newYork\/new-york-hero-sm.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

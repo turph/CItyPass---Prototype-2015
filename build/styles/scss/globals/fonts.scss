@@ -12,7 +12,7 @@ $font-primary: "Proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Custom Font Mixin for easy declaration of customized fonts on elements
 
-@mixin custom-font($color:$default,$font-family:$font-primary,$font-size:14px,$font-style:normal,$font-weight:400) {
+@mixin custom-font($color:$default,$font-family:$font-primary,$font-size:13px,$font-style:normal,$font-weight:400) {
 	// Organized alphabetically (color -> weight)
 	color: $color;
 	font-family: $font-family;
