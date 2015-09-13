@@ -1,0 +1,15 @@
+/* Device Breakpoints */
+$break-small: 640px;
+$break-medium: 800px;
+$break-large: 1024px;
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width:$break-large) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width:$break-medium) { @content ; }
+	}
+	@else if $point == phone {
+		@media (max-width:$break-small)  { @content ; }
+	}
+}

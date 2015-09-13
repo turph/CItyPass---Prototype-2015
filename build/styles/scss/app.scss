@@ -13,6 +13,7 @@ $img-url: "../img";
 
 // Color Palette & Mixins for the Application
 // ------------------------------------------------------------------------
+@import "globals/breakpoints";
 @import "globals/colors";
 @import "globals/cpColors";
 @import "globals/custom-mixins";
@@ -20,9 +21,9 @@ $img-url: "../img";
 
 // Globals
 // ------------------------------------------------------------------------
+@import "globals/layout";
 @import "globals/typography";
 @import "globals/mainNav";
-@import "globals/layout";
 @import "globals/header";
 @import "globals/defaults";
 
@@ -33,10 +34,3 @@ $img-url: "../img";
 // Start Application Styles & Settings
 // ------------------------------------------------------------------------
 @import "partials/viewport";
-
-// Add additional /partials Below
-// ------------------------------------------------------------------------
-// @import "partials/...";
-
-// Mobile Specific Styles & Settings
-@import "globals/mobile";
