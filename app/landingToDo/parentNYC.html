@@ -1,9 +1,41 @@
 <!doctype html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="../assets/js/app.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="../assets/css/app.css" type="text/css" media="screen">
 </head>
+<script>
+	$(window).resize(){
+	    resize();
+	}
+	$(document).ready(){
+	    resize();
+	}
+	$(document).ready (function resize(){
+		if($(window).width() < 640)
+			{
+				$("#detail1").insertAfter(".attractions .tile:eq(0)");
+			}
+		else if($(window).width() < 800)
+			{
+				$("#detail1").insertAfter('.attractions .tile:eq(1)');
+			}
+		else
+		{
+		//Desktop
+		//Leave original layout
+		}
+	});
+</script>
+<script>
+	$(document).ready (function () {
+		$('#learn1').click (function () {
+			$('#detail1').slideToggle("slow");
+			$('.attractions div:eq(0)').toggleClass("noBorder");
+			return false;
+		});
+	});
+</script>
 <body class="wrap">
 	<div id="header" class="masthead">
 		<div class="nav left">menu</div>
@@ -29,8 +61,9 @@
 					<div class="tile">
 						<div class="title">Empire State Building Experience</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-empire.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>No visit to New York City would be complete without a stop at this masterpiece of Art Deco design, perhaps the most famous office building in the world.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>No visit to New York City would be complete without a stop at this masterpiece of Art Deco design, perhaps the most famous office building in the world.</div>
 						<div class="info">
+							<div class="learn"><a id="learn1" href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Included attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -38,8 +71,9 @@
 					<div class="tile">
 						<div class="title">Statue of Liberty</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-statue-of-liberty.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>A stirring symbol of freedom, the Statue of Liberty has been a beacon in New York Harbor since 1886.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>A stirring symbol of freedom, the Statue of Liberty has been a beacon in New York Harbor since 1886.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -47,17 +81,28 @@
 					<div class="tile">
 						<div class="title">Ellis Island Immigration Museum</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-ellis-island.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>Ellis Island, the portal through which millions of immigrants entered the United States, is a must-see for anyone interested in the personal stories of those who came to America in search of a new beginning.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>Ellis Island, the portal through which millions of immigrants entered the United States, is a must-see for anyone interested in the personal stories of those who came to America in search of a new beginning.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
+						</div>
+					</div>
+					<div class="tileDetail" id="detail1">
+						<h4>Visiting the Empire State Building</h4>
+						<div class="detailCopy">
+							<p>No visit to New York City would be complete without a stop at this masterpiece of Art Deco design, perhaps the most famous office building in the world. From its magnificent lobby — now sporting a re-creation of its original spectacular ceiling mural — to the 86th-floor observatory perched more than 1,000 feet (305 meters) above the city streets, this National Historic Landmark gives visitors plenty to admire.</p>
+							<p>No visit to New York City would be complete without a stop at this masterpiece of Art Deco design, perhaps the most famous office building in the world. From its magnificent lobby — now sporting a re-creation of its original spectacular ceiling mural — to the 86th-floor observatory perched more than 1,000 feet (305 meters) above the city streets, this National Historic Landmark gives visitors plenty to admire.</p>
+							<p><strong>What to Do</strong><br>Open past midnight 365 days a year, it's a romantic spot for a late-night kiss.</p>
+							<p><strong>What to Do</strong><br>Open past midnight 365 days a year, it's a romantic spot for a late-night kiss.</p>
 						</div>
 					</div>
 					<div class="tile">
 						<div class="title">American Museum of Natural History</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-amnh.jpg')";></div>
-						<div class="description"><span class="type mouse">Museums & Tours</span>Dinosaur fossils? Check. Theories of evolution? Check. Planetarium space show and IMAX theater? Double-check.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Museums & Tours</span>Dinosaur fossils? Check. Theories of evolution? Check. Planetarium space show and IMAX theater? Double-check.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Included attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -65,8 +110,9 @@
 					<div class="tile">
 						<div class="title">The Metropolitan Museum of Art</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-met.jpg')";></div>
-						<div class="description"><span class="type mouse">Museums & Tours</span>Known simply as "the Met," this museum offers an unparalleled view of the world, all under one roof. In total, the Met's collections include more than two million works of art that span over five thousand years of history.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Museums & Tours</span>Known simply as "the Met," this museum offers an unparalleled view of the world, all under one roof. In total, the Met's collections include more than two million works of art that span over five thousand years of history.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Included attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -74,8 +120,9 @@
 					<div class="tile">
 						<div class="title">Guggenheim Museum</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-guggenheim.jpg')";></div>
-						<div class="description"><span class="type mouse">Museums & Tours</span>Known as much for what's on the outside as what's on the inside, the Guggenheim Museum is simply stunning.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Museums & Tours</span>Known as much for what's on the outside as what's on the inside, the Guggenheim Museum is simply stunning.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -83,8 +130,9 @@
 					<div class="tile">
 						<div class="title">9/11 Memorial</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-911-memorial.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>The 9/11 Memorial honors the thousands of people killed in the attacks on September 11, 2001 and those who died in the World Trade Center bombing in 1993.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>The 9/11 Memorial honors the thousands of people killed in the attacks on September 11, 2001 and those who died in the World Trade Center bombing in 1993.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -92,8 +140,9 @@
 					<div class="tile">
 						<div class="title">Top of the Rock&#174; Observation Deck & Rockefeller Center</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-toprock.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>Whether it's peeking in on NBC's Today show, cheering for Radio City Music Hall's dancing Rockettes, or spinning on an ice rink presided over by Prometheus himself, visitors to Rockefeller Center have plenty to do.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>Whether it's peeking in on NBC's Today show, cheering for Radio City Music Hall's dancing Rockettes, or spinning on an ice rink presided over by Prometheus himself, visitors to Rockefeller Center have plenty to do.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -101,8 +150,9 @@
 					<div class="tile">
 						<div class="title">Intrepid Sea, Air & Space Museum</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-intrepid.jpg')";></div>
-						<div class="description"><span class="type mouse">Museums & Tours</span>Space shuttles, spy planes, and submarines... all this and more can be seen and experienced at the Intrepid Sea, Air & Space Museum located right on the Hudson River.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Museums & Tours</span>Space shuttles, spy planes, and submarines... all this and more can be seen and experienced at the Intrepid Sea, Air & Space Museum located right on the Hudson River.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -110,8 +160,9 @@
 					<div class="tile">
 						<div class="title">Central Park</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-central-park.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>Thought of as the city's playground, Central Park covers 843 acres (341 hectares) and is located in the heart of Manhattan.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>Thought of as the city's playground, Central Park covers 843 acres (341 hectares) and is located in the heart of Manhattan.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
@@ -119,15 +170,16 @@
 					<div class="tile">
 						<div class="title">Times Square</div>
 						<div class="att_img" style="background-image:url('../assets/img/newYork/ttdny-timessquare.jpg')";></div>
-						<div class="description"><span class="type mouse">Sightseeing Tours</span>Offering a welcome respite from the hustle and bustle of the city streets that surround it on all sides, the park is a refreshing year-round sanctuary.<span class="learn"><a href="">Learn more</a></span></div>
+						<div class="description"><span class="type mouse">Sightseeing Tours</span>Offering a welcome respite from the hustle and bustle of the city streets that surround it on all sides, the park is a refreshing year-round sanctuary.</div>
 						<div class="info">
+							<div class="learn"><a href="">Learn more</a></div>
 							<div><img src="../assets/img/icons/status.png" width="16" height="16" alt="Status">Optional attraction</div>
 							<div><img src="../assets/img/icons/clock.png" width="16" height="16" alt="Clock">5 Hours</div>
 						</div>
 					</div>
 				</div>
 				<div class="closing">
-					<p>To visit the sites above that charge admission, use a <a href="/new-york" track="NY CP - last p">New York CityPASS</a> and save nearly half off combined entrance fees. CityPASS holders also breeze past most main-entrance ticket lines, which means they get where they’re going while others are still waiting in the queue. New York CityPASS includes admission to the <a href="/new-york/empire-state-building" track="ESB - last p">Empire State Building</a>, <a href="/new-york/metropolitan-museum-art" track="Met - last p">The Metropolitan Museum of Art</a> and the <a href="/new-york/museum-natural-history" track="AMNH - last p">American Museum of Natural History</a>, as well as three option tickets that give travelers a choice between the <a href="/new-york/statue-liberty" track="statue - last p">Statue of Liberty and Ellis Island</a> or a <a href="/new-york/circle-line-cruises" track="Circle Line - last p">Circle Line Sightseeing Cruise</a>, between the <a href="/new-york/guggenheim-museum" track="Guggenheim - last p">Guggenheim Museum</a> or <a href="/new-york/top-of-the-rock" track="ToR - last p">Top of the Rock</a>®, and between the <a href="/new-york/911-memorial-museum">9/11 Memorial &amp; Museum</a> or the <a href="/new-york/intrepid-museum">Intrepid Sea, Air &amp; Space Museum</a>. Some special exhibits are not included with the CityPASS and may require an extra fee.</p>
+					<p>To visit the sites above that charge admission, use a <a href="/new-york" track="NY CP - last p">New York CityPASS</a> and save nearly half off combined entrance fees. CityPASS holders also breeze past most main-entrance ticket lines, which means they get where they're going while others are still waiting in the queue. New York CityPASS includes admission to the <a href="/new-york/empire-state-building" track="ESB - last p">Empire State Building</a>, <a href="/new-york/metropolitan-museum-art" track="Met - last p">The Metropolitan Museum of Art</a> and the <a href="/new-york/museum-natural-history" track="AMNH - last p">American Museum of Natural History</a>, as well as three option tickets that give travelers a choice between the <a href="/new-york/statue-liberty" track="statue - last p">Statue of Liberty and Ellis Island</a> or a <a href="/new-york/circle-line-cruises" track="Circle Line - last p">Circle Line Sightseeing Cruise</a>, between the <a href="/new-york/guggenheim-museum" track="Guggenheim - last p">Guggenheim Museum</a> or <a href="/new-york/top-of-the-rock" track="ToR - last p">Top of the Rock</a>®, and between the <a href="/new-york/911-memorial-museum">9/11 Memorial &amp; Museum</a> or the <a href="/new-york/intrepid-museum">Intrepid Sea, Air &amp; Space Museum</a>. Some special exhibits are not included with the CityPASS and may require an extra fee.</p>
 					<p>CityPASS can be purchased online or at any of our participating <a href="/new-york" track="NY CP - ny attractions link last p">New York attractions</a>. Use our New York City Pass and discover these top places to visit and things to do in New York.</p>
 				</div>
 			</div>

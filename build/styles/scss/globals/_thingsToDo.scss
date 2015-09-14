@@ -1,9 +1,9 @@
 .intro{
-	margin-bottom:20px;
 	h3{color:$blue;font-weight:$regular;}
 }
 .closing{
-	clear:both;
+	float:left;
+	margin:40px 0;
 	background-color:$gray4;
 	padding:20px;
 }
@@ -14,11 +14,19 @@
 		float:left;
 		width:32%;
 		margin-right:2%;
-		margin-bottom:40px;
-		&:nth-child(3n){margin-right:0;}
+		margin-top:40px;
+		&:nth-child(3){margin-right:0;}
+		&:nth-child(4){margin-right:0;}
+		&:nth-child(7){margin-right:0;}
+		&:nth-child(10){margin-right:0;}
 		border-bottom:2px solid $blue2;
 		min-height:400px;
-		@include breakpoint(tablet) {width:49%;&:nth-child(2n){margin-right:0;}}
+		@include breakpoint(tablet) {
+			width:49%;
+			&:nth-child(2){margin-right:0;}
+			&:nth-child(5){margin-right:0;}
+			&:nth-child(6){margin-right:0;}
+		}
 		@include breakpoint(phone) {width:100%;margin-right:0;}
 		&:hover{background-color:$gray5;@include transition;};
 		.title{font-size:16px;color:$blue;padding:14px 14px 0 14px;font-weight:$regular;min-height:73px;background-color:$gray4;}
@@ -31,10 +39,23 @@
 			}
 		}
 		.info{
-			margin:4px;font-size:11px;position:absolute;bottom:0;width:100%;
+			margin:6px 0;padding:0 4px;font-size:11px;position:absolute;bottom:0;width:100%;
 			img{margin-right:3px;}
+			background-color:$white;
+			.learn{padding:4px 4px 0 4px;}
 		}
 	}	
+	.tileDetail{
+		min-height:300px;width:100%;border-bottom:2px solid $blue2;float:left;display:none;padding:20px;
+		background-color:$gray5;
+		.detailCopy{
+	    @include column-count(3, 10);
+			font-size:11px;
+			@include breakpoint(tablet) {@include column-count(2, 10);}
+			@include breakpoint(phone) {@include column-count(1, 0);}
+		}
+	}
+	.noBorder{border-bottom:none;}
 }
 
 a{color:$blue2;text-decoration:underline;}
