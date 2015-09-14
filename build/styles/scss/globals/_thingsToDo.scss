@@ -47,7 +47,7 @@
 	}	
 	.tileDetail{
 		min-height:300px;width:100%;border-bottom:2px solid $blue2;float:left;display:none;padding:20px;
-		background-color:$gray5;
+		margin-top:5px;background-color:$gray5;
 		.detailCopy{
 	    @include column-count(3, 10);
 			font-size:11px;
